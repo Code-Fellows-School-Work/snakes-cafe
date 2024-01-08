@@ -1,4 +1,4 @@
-
+from collections import Counter
 
 # Used ChatGPT to explain how to store a multiline string instead of individually using print function for each line
 # Own notes: Contents within the triple quotations define a multiline string
@@ -51,11 +51,7 @@ order_request = '''
 **************************************
 '''
 
-user_input = ''
-
 orders = []
-
-print("> " + user_input + ' ')
 
 # Used a Python Crash Course book by Eric Matthes to learn how to use 'while True loop'
 # While True beings the program in an active state and loop will continue running as long as true
@@ -64,5 +60,8 @@ while True:
     if user_input == 'quit':
         break
     else:
-        user_input.append(orders)
-        print(f"1 order of {user_input} has been added to your meal")
+        orders.append(user_input)
+        order_number = Counter(orders)
+        # Used ChatGPT to help troubleshoot this loop setup
+        for item, count in order_number.items():
+            print(f"{count} order of {item} has been added to your meal")
