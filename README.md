@@ -3,6 +3,7 @@
 ## Project: Snakes Cafe
 
 ### Author: Errol Vidad
+V.1.0.0 (Pr: https://github.com/Code-Fellows-School-Work/snakes-cafe/pull/1)
 
 ### Links and Resources
 - Back-end server url (when applicable): None
